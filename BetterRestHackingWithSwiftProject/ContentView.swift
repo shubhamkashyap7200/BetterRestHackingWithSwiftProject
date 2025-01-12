@@ -47,7 +47,10 @@ struct ContentView: View {
                             Text($0, format: .number)
                         }
                     }
-                    
+                }
+                
+                Section {
+                    Text("Your recommended bed time is \(alertMessage)")
                 }
             }
             .alert(alertTitle, isPresented: $showingAlert) {
@@ -87,7 +90,6 @@ struct ContentView: View {
             // error handling
             alertTitle = "Error"
             alertMessage = "Sorry, there was a problem calculating your bedtime."
-
         }
         
         showingAlert = true
